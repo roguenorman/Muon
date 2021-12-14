@@ -49,7 +49,6 @@ def post_url(version, url):
                 #Add URL
                 url = { 'id': next(id), 'base64_url': url, 'verified': verified, 'verified_at': datetime.utcnow() }
                 URLS.append(url)
-                print('yes')
                 resp = make_response(jsonify(url),201)
                 resp.headers["Content-Type"] = "application/json"
                 return resp
