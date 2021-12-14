@@ -13,7 +13,7 @@ URLS = [
 def get_url(version, url):
     """Function to retreive a URL from the API"""
 
-    if version and url and request.method == "GET":
+    if version == 1 and url and request.method == "GET":
 
         if isBase64(url):
             try:
@@ -31,7 +31,7 @@ def get_url(version, url):
             return resp
 
     else:
-        resp = make_response(jsonify({"message": "Please provide version, host and params"}),400)
+        resp = make_response(jsonify({"message": "Bad request"}),400)
         resp.headers["Content-Type"] = "application/json"
         return resp
 
