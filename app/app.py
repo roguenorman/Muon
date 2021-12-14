@@ -6,9 +6,7 @@ import itertools
 app = Flask(__name__)
 
 id = itertools.count()
-URLS = [
-  { 'id': '1', 'base64_url': 'd3d3Lmdvb2dsZS5jb20vc2VhcmNoP3E9dXJpJmNsaWVudD11YnVudHUmaHM9Um5UJmNoYW5uZWw9ZnMmc3hzcmY9QU9hZW12SXotN1hjQVpHamY0V0F6Tmc4VjRSUkx6dGl5QToxNjM5NDc4NzUwNTI2JnRibT1pc2NoJnNvdXJjZT1pdSZpY3R4PTEmZmlyPVZ5Q1VJWGNSVjN2aWFNJTI1MkNfYlh0eGhoRTRjWG84TSUyNTJDJTI1MkZtJTI1MkYwN3d6MiUyNTNCMlZPNE5jdlFoN0VzQk0lMjUyQ040RWJMZ21zOFhyVmVNJTI1MkNfJTI1M0JCRU1UemVRWHpIYy03TSUyNTJDSmNVUFdaeFNfWkpLWE0lMjUyQ18lMjUzQlJ5WjExdkdEbXF0WTJNJTI1MkN1NndCTTRtR2UxbEpRTSUyNTJDXyUyNTNCTzFkM3JxRlcyVFkxbU0lMjUyQzVfSzEzREEtWktVSHRNJTI1MkNfJnZldD0xJnVzZz1BSTRfLWtSa1lMa2FvSmxPV2lPc3Y5bDFEaWswYnA3UldBJnNhPVgmdmVkPTJhaFVLRXdpSXhhcWtqdVAwQWhXRFRHd0dIVE5vQ2VnUV9CMTZCQWd0RUFFI2ltZ3JjPVJ5WjExdkdEbXF0WTJN', 'verified': True, 'verified_at': '' }
-]
+URLS = []
 
 @app.route('/urlinfo/<int:version>/<url>', methods=["GET"])
 def get_url(version, url):
