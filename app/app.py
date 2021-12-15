@@ -18,10 +18,14 @@ def get_url(version, url):
             try:
                 #Get URL here
                 url_info = next((item for item in URLS if item["base64_url"] == f'{url}'), None)
-                print(url_info)
-                resp = make_response(jsonify(url_info),200)
-                resp.headers["Content-Type"] = "application/json"
-                return resp
+                if not url_info:
+                    resp = make_response(jsonify({"message": "url not found"}),404)
+                    resp.headers["Content-Type"] = "application/json"
+                    return resp
+                else:
+                    resp = make_response(jsonify(url_info),200)
+                    resp.headers["Content-Type"] = "application/json"
+                    return resp                   
             except Exception as exception:
                 return jsonify(str(exception))
         else:
@@ -47,11 +51,10 @@ def post_url(version, url):
         if isBase64(url):
             try:
                 #Add URL
-                url = { 
-                    'id': next(id), 
-                    'base64_url': url, 
-                    'verified': verified, 
-                    'verified_at': datetime.utcnow() 
+                url = { 'id': next(id), 
+                        'base64_url': url, 
+                        'verified': verified, 
+                        'verified_at': datetime.utcnow() 
                 }
                 URLS.append(url)
                 resp = make_response(jsonify(url),201)
