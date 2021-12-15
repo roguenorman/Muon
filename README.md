@@ -34,9 +34,12 @@ docker run -d \
 ## Usage
 
 All responses will be in JSON. 
+Note: The url must be base64 encoded
 
 
-GET Request Parameters
+
+### GET Request Parameters
+
 | Name          | Value             | Required  |
 | ------------- |-------------------|:---------:|
 | version       | 1                 | Yes       |
@@ -61,7 +64,9 @@ Response
 
 ```
 
-POST Request Parameters
+
+### POST Request Parameters
+
 | Name          | Value              | Required  |
 | ------------- |--------------------|:---------:|
 | url           | base64 encoded url | Yes       |
