@@ -17,7 +17,7 @@ services:
     image: rogueranga/muon:latest
     container_name: muon
     ports:
-      - 80:80
+      - 5000:5000
     restart: unless-stopped
 ```
 
@@ -26,7 +26,7 @@ services:
 ```bash
 docker run -d \
   --name=muon \
-  -p 80:80 \
+  -p 5000:5000 \
   --restart unless-stopped \
   rogueranga/muon:latest
 ```
@@ -49,7 +49,7 @@ Note: The url must be base64 encoded
 Example request
 
 ```
-$ curl -X GET http://muon.com/urlinfo/1/d3d3LmJhc2U2NGVuY29kZS5vcmc6NDQzLw==
+$ curl -X GET http://muon.com:5000/urlinfo/1/d3d3LmJhc2U2NGVuY29kZS5vcmc6NDQzLw==
 ```
 
 Response
@@ -76,7 +76,7 @@ Response
 Example request
 
 ```
-$ curl -X POST http://muon.com/urlinfo/1/d3d3LmJhc2U2NGVuY29kZS5vcmc6NDQzLw==?verified=True
+$ curl -X POST http://muon.com:5000/urlinfo/1/d3d3LmJhc2U2NGVuY29kZS5vcmc6NDQzLw==?verified=True
 ```
 
 response
