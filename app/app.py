@@ -78,3 +78,6 @@ def isBase64(s):
         return base64.b64encode(base64.b64decode(s)).decode() == s
     except Exception:
         return False
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
