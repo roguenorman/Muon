@@ -91,6 +91,21 @@ response
 
 ```
 
+
+### Testing
+
+Testing assumes you have the API avaiable on localhost:5000. To run the tests install pytests
+
+```python
+pip3 install pytest
+```
+
+Then run pytest from the tests dir
+
+```
+/tests$ pytest
+```
+
 ## Contributing
 Pull requests are welcome.
 
