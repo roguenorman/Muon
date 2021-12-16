@@ -14,7 +14,7 @@ Here are some examples to help you get started creating a container.
 version: "2.1"
 services:
   muon:
-    image: rogueranga/muon:v1
+    image: rogueranga/muon:latest
     container_name: muon
     ports:
       - 5000:5000
@@ -28,7 +28,7 @@ docker run -d \
   --name=muon \
   -p 5000:5000 \
   --restart unless-stopped \
-  rogueranga/muon:v1
+  rogueranga/muon:latest
 ```
 
 ## Usage
