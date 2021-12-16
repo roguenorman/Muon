@@ -49,7 +49,7 @@ Note: The url must be base64 encoded
 Example request
 
 ```
-$ curl -X GET http://muon.com:5000/urlinfo/1/d3d3LmJhc2U2NGVuY29kZS5vcmc6NDQzLw==
+$ curl -X GET http://localhost:5000/urlinfo/1/d3d3LmJhc2U2NGVuY29kZS5vcmc6NDQzLw==
 ```
 
 Response
@@ -76,7 +76,7 @@ Response
 Example request
 
 ```
-$ curl -X POST http://muon.com:5000/urlinfo/1/d3d3LmJhc2U2NGVuY29kZS5vcmc6NDQzLw==?verified=True
+$ curl -X POST http://localhost:5000/urlinfo/1/d3d3LmJhc2U2NGVuY29kZS5vcmc6NDQzLw==?verified=True
 ```
 
 response
